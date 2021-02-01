@@ -1,4 +1,4 @@
-# SqlSplitter介绍
+# SqlSplitter
 
 将一整个Sql脚本分割为由一条条sql语句组成的sql列表，用于给jdbc执行。
 datagrip 能直接成功的脚本那么该Splitter分割出来的sql就能按照顺序执行。
