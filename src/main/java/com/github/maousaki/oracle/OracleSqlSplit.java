@@ -42,6 +42,7 @@ public class OracleSqlSplit extends SqlSplit {
         StringBuffer word = new StringBuffer();
         EndCheck endChecker = null;
         boolean packageCheck = false;
+        boolean textStart = false;
         while ((line = lineReader.readLine()) != null) {
             if (StringUtils.isBlank(line)) {
                 continue;
@@ -49,7 +50,6 @@ public class OracleSqlSplit extends SqlSplit {
             boolean wordStart = false;
             boolean wordEnd = false;
             char[] charLine = line.toCharArray();
-            boolean textStart = false;
             boolean shouldAppendChar = false;
             // 一个一个字符进行读取
             for (int i = 0; i < line.length(); i++) {
